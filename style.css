@@ -1,0 +1,390 @@
+/* Reset e Variáveis de Vanguarda (Bambu Acetinado & Matcha Puro) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-bambu: #FAF9F5;       /* Off-white tom de bambu e papel Washi japonês */
+    --text-black: #161615;     /* Preto nanquim fosco para escrita de alta costura */
+    --text-muted: #7A7873;     /* Cinza bambu para descrições respirarem */
+    --accent-matcha: #2D4231;  /* O Verde Matcha Profundo Aristocrático */
+    --bg-panel: #F2EFEA;       /* Creme linho suave para as faixas de contraste */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-bambu);
+    color: var(--text-black);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 📐 Grade Zen de Fundo (Painéis verticais assimétricos) */
+.zen-canvas-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr 1fr; /* Três colunas totalmente desalinhadas */
+    pointer-events: none;
+    z-index: 1;
+}
+
+.zen-canvas-lines .canvas-panel {
+    height: 100%;
+    border-right: 1px solid rgba(45, 66, 49, 0.04); /* Linha sutil verde matcha */
+}
+
+.zen-canvas-lines .canvas-panel:nth-child(2) {
+    background-color: rgba(242, 239, 234, 0.3); /* Faixa central sutilmente contrastada */
+}
+
+/* 🧭 Navbar Flutuante */
+.navbar-vanguard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo-vanguard {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 5px;
+}
+
+.logo-vanguard span {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent-matcha);
+}
+
+.btn-allocate {
+    text-decoration: none;
+    color: var(--text-black);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-allocate:hover {
+    color: var(--accent-matcha);
+    letter-spacing: 4px;
+}
+
+/* 🪐 O Container de Vanguarda */
+.vanguard-container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr 1fr; /* Casamento perfeito com a grade de fundo */
+    align-items: center;
+    padding: 0 6%;
+    z-index: 2;
+    padding-top: 120px;
+}
+
+/* FAIXA 1: O Título Monumental Rotacionado na Vertical */
+.vanguard-title-layer {
+    height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.vertical-text {
+    font-family: var(--font-serif);
+    font-size: 7.5vw;
+    font-weight: 700;
+    line-height: 0.9;
+    color: rgba(22, 22, 21, 0.04); /* Letra gigante vazada de fundo */
+    writing-mode: vertical-rl;     /* A mágica do texto em pé estilo japonês */
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.vertical-text .italic-text {
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(45, 66, 49, 0.08);
+}
+
+/* FAIXA 2: O Manifesto Poético Deslocado */
+.vanguard-manifesto {
+    max-width: 460px;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.origin-tag {
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: var(--accent-matcha);
+}
+
+.vanguard-manifesto h2 {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+}
+
+.vanguard-manifesto h2 span {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent-matcha);
+}
+
+.vanguard-manifesto .manifesto-desc {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+.btn-explore {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-black);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--text-black);
+    padding-bottom: 4px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-explore:hover {
+    color: var(--accent-matcha);
+    border-color: var(--accent-matcha);
+    letter-spacing: 3px;
+}
+
+/* FAIXA 3: Bloco Cerâmico Flutuante */
+.vanguard-sculpture {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ceramic-plate {
+    background-color: var(--bg-panel);
+    border: 1px solid rgba(45, 66, 49, 0.06);
+    padding: 3.5rem 2.5rem;
+    width: 100%;
+    max-width: 340px;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.015);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blend-number {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--accent-matcha);
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.ceramic-plate h3 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--accent-matcha);
+}
+
+.ceramic-plate p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* Sutil aura verde que acende suavemente por trás do card cerâmico no hover */
+.ceramic-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 90% 10%, rgba(45, 66, 49, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.ceramic-plate:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(45, 66, 49, 0.15);
+    box-shadow: 0 40px 70px rgba(45, 66, 49, 0.04);
+}
+
+/* 📱 Responsividade Radical Mobile */
+@media (max-width: 1024px) {
+    .vanguard-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        padding-top: 15vh;
+        padding-bottom: 5vh;
+    }
+    .vanguard-title-layer {
+        display: none; /* Esconde a letra vertical gigante no celular para limpar o layout */
+    }
+    .vanguard-manifesto {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+        padding-right: 0;
+    }
+    .vanguard-sculpture {
+        justify-content: center;
+    }
+    .ceramic-plate {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DO RODAPÉ (FOOTER ZEN VANGUARD)
+   ========================================================================== */
+.footer-vanguard {
+    background-color: var(--bg-bambu);
+    padding: 8rem 6% 3rem 6%;
+    border-top: 1px solid rgba(45, 66, 49, 0.08);
+    position: relative;
+    z-index: 5;
+    margin-top: 5vh;
+}
+
+.footer-vanguard-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+.footer-vanguard-logo {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
+    color: var(--text-black);
+}
+
+.footer-vanguard-logo span {
+    color: var(--accent-matcha);
+}
+
+.footer-vanguard-tagline {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    max-width: 320px;
+    font-weight: 300;
+}
+
+.fv-label {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: var(--text-black);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.footer-vanguard-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.fv-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.fv-link:hover {
+    color: var(--accent-matcha);
+    transform: translateX(4px);
+}
+
+.fv-status {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn-vanguard-footer {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-black);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--text-black);
+    padding-bottom: 4px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-vanguard-footer:hover {
+    color: var(--accent-matcha);
+    border-color: var(--accent-matcha);
+    letter-spacing: 4px;
+}
+
+.footer-vanguard-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(45, 66, 49, 0.04);
+}
+
+.footer-vanguard-bottom p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+    .footer-vanguard-container {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        text-align: center;
+    }
+    .footer-vanguard-tagline {
+        margin: 0 auto;
+    }
+    .fv-link:hover {
+        transform: translateX(0);
+    }
+}
